@@ -6,7 +6,8 @@ public class message{
     private long myOrigin ;
     private long myDestination;
     private int actionCode;
-    private long myData;  
+    private long myData; 
+    private String aTextMessage ="nothin here but the NSA";
     
     public void setID(long id){
         idNumber = id;
@@ -46,5 +47,11 @@ public class message{
     
     public int getActionCode(){
         return actionCode;
+    }
+    public void setMessageTxt(String aText){
+        aTextMessage = aText;
+    }
+    public String getMessageTxt(){
+        return aTextMessage;
     }
 }
