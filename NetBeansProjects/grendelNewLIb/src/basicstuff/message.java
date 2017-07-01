@@ -1,3 +1,5 @@
+package basicstuff;
+
 public class message{
 
     private long idNumber ;

@@ -1,3 +1,5 @@
+package basicstuff;
+
 
 
 import java.io.BufferedReader;
