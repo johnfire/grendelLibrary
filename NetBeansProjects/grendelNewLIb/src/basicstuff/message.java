@@ -1,6 +1,7 @@
 package basicstuff;
+import java.io.Serializable
 
-public class message extends basicObject{
+public class message extends basicObject implements Serializable{
 
     private long idNumber = 0;
     private long myOrigin = 0;
