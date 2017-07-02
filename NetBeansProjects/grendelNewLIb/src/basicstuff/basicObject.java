@@ -90,20 +90,19 @@ public abstract class basicObject extends Thread {
           //Create object of FileReader
           FileReader inputFile = new FileReader(someTxtFile);
 
-          //Instantiate the BufferedReader Class
-          BufferedReader bufferReader = new BufferedReader(inputFile);
-
-          //Variable to hold the one line data
-          String line;
-
-          // Read file line by line and print on the console
-          while ((line = bufferReader.readLine()) != null)   {
-              mystring += line;
-              // System.out.println(line);
-          }
-          //Close the buffer reader
-          bufferReader.close();
-       }catch(Exception e){
+           //Variable to hold the one line data
+           try ( //Instantiate the BufferedReader Class
+                   BufferedReader bufferReader = new BufferedReader(inputFile)) {
+               //Variable to hold the one line data
+               String line;
+               // Read file line by line and print on the console
+               while ((line = bufferReader.readLine()) != null) {
+                   mystring += line;
+                   // System.out.println(line);
+               }
+               //Close the buffer reader
+           }
+       }catch(IOException e){
           System.out.println("Error while reading file line by line:" + e.getMessage());                      
        }
        return mystring; 

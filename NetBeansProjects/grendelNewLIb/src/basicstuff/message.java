@@ -1,6 +1,6 @@
 package basicstuff;
 
-public class message{
+public class message extends basicObject{
 
     private long idNumber = 0;
     private long myOrigin = 0;
