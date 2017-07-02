@@ -25,7 +25,7 @@ public class ObjectStatus extends Thread {
     public void run(){
         while (true){
             try {
-                System.out.println("-----we are in the + " + myName + " routine, process number "+ pid);
+                System.out.println("-----CELL REPORT-----we are in the " + myName + " routine, process number "+ pid);
                 Thread.getAllStackTraces().keySet().forEach((t) -> System.out.println("----------"+ t.getName() + " Is Daemon " + t.isDaemon() + " Is Alive " + t.isAlive()));
                 Thread.sleep(5000);
             } catch (InterruptedException ex) {
