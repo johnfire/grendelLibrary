@@ -1,4 +1,4 @@
-//package basicstuff;
+package basicstuff;
 import java.io.Serializable;
 
 public class message /**/ implements Serializable{
