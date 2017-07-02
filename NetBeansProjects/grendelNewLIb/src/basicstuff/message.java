@@ -1,14 +1,14 @@
-package basicstuff;
+//package basicstuff;
 import java.io.Serializable;
 
-public class message extends basicObject implements Serializable{
+public class message /**/ implements Serializable{
 
     private long idNumber = 0;
     private long myOrigin = 0;
     private long myDestination = 0;
     private int actionCode = 0;
     private long myData = 0; 
-    private String aTextMessage ="nothin here but the NSA";
+    private String aTextMessage = "nothin here but the NSA";
     
     public void setID(long id){
         idNumber = id;
