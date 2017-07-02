@@ -1,7 +1,7 @@
 package basicstuff;
 
 //test
-
+import basicstuff.
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
