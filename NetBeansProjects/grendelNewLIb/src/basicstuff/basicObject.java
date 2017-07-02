@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,7 +36,7 @@ import java.util.logging.Logger;
  *
  * @author christopherrehm
  */
-public abstract class basicObject extends Thread {
+public abstract class basicObject extends Thread implements Serializable {
     
     // this is the basic object that all objects are derived from it has the following properties
     // creates and implements analysis
