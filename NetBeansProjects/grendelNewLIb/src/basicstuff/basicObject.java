@@ -1,7 +1,7 @@
 package basicstuff;
 
 //test
-import basicstuff.
+import basicstuff.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
@@ -116,5 +116,15 @@ public abstract class basicObject extends Thread implements Serializable {
             Logger.getLogger(basicObject.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
+    }
+    
+    public String assembleMessage (String[] args){
+        int x = 0;
+        String theMessage = null;
+        for ( x=0; x<args.length;x++){
+         theMessage += args[x];    
+        }
+        System.out.println("the message assembled is " + theMessage);
+        return theMessage;
     }
 }
