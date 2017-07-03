@@ -1,7 +1,7 @@
 package basicstuff;
 import java.io.Serializable;
 
-public class Message /**/ implements Serializable{
+public class Message implements Serializable{
 
     long idNumber = 0;
     long myOrigin = 0;

@@ -1,7 +1,6 @@
 package basicstuff;
 
 //test
-import basicstuff.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
@@ -127,4 +126,21 @@ public class BasicObject extends Thread implements Serializable {
         System.out.println("the message assembled is " + theMessage);
         return theMessage;
     }
+    
+    public void systemMessage(String msg){
+        System.out.println("-----System Message-----" + msg);  
+    }
+    
+    public void systemMessageError(String msg){
+        System.out.println("-----SYSTEM MESSAGE -ERROR-----" + msg);  
+    }
+    
+    public void systemMessageStartUp (String msg){
+        System.out.println("-----System Message -Start Up Notice-----" + msg);
+    }
+    
+    public void testingMessage (String msg){
+        System.out.println("-----Testing Message-----" + msg);
+    }
+    
 }

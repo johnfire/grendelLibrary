@@ -5,6 +5,8 @@
  */
 package basicstuff;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,12 +23,19 @@ public class ObjectStatus extends Thread {
         myName = WhoAmI;
     }
     
+    @Override
     public void run(){
-        while (true){
+        int pid = 0;
             try {
-                System.out.println("-----CELL REPORT-----we are in the " + myName + " routine, process number ");
+                
+                pid = Integer.parseInt(new File("/proc/self").getCanonicalFile().getName());
+            } catch (IOException ex) {
+            Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
+        
+            try {
+                System.out.println("-----CELL REPORT-----we are in the " + myName + " routine, process number " + pid);
                 Thread.sleep(5000);
-            } catch (InterruptedException ex) {
+            } catch (InterruptedException e) {
                 Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
             }
         }     
