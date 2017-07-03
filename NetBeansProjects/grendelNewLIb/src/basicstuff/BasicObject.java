@@ -3,6 +3,7 @@ package basicstuff;
 //test
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -141,6 +142,17 @@ public class BasicObject extends Thread implements Serializable {
     
     public void testingMessage (String msg){
         System.out.println("-----Testing Message-----" + msg);
+    }
+    
+    public int getPID(){
+        int pid = 0;
+        try {
+             pid = Integer.parseInt(new File("/proc/self").getCanonicalFile().getName());
+            
+        } catch (IOException ex) {
+            Logger.getLogger(BasicObject.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return pid;
     }
     
 }
