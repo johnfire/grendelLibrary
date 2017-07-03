@@ -8,7 +8,7 @@ public class Message implements Serializable{
     int myOrigin = 0;
     int myDestination = 0;
     int actionCode = 0;
-    int[] myData = new int[] {0};
+    int[] myData = new int[] {0,1,2,3};
     String aTextMessage = "nothin here but the NSA";
     
     public void setID(int id){
