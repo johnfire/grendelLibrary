@@ -36,11 +36,11 @@ import java.util.logging.Logger;
  *
  * @author christopherrehm
  */
-public class basicObject extends Thread implements Serializable {
+public class BasicObject extends Thread implements Serializable {
     
     // this is the basic object that all objects are derived from it has the following properties
     // creates and implements analysis
-    // creates and implements basic message sending anywhere in the system
+    // creates and implements basic Message sending anywhere in the system
     // maintains a list of who is accessing this object lock problems 
     // write data to txt file 
     // read data from txt file
@@ -78,7 +78,7 @@ public class basicObject extends Thread implements Serializable {
     }
     
     public long newMessage() {   
-        message newMessage = new message();
+        Message newMessage = new Message();
         return newMessage.showID();
     }  
     
@@ -113,7 +113,7 @@ public class basicObject extends Thread implements Serializable {
          try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(someTxtFile), "utf-8"))) {
            writer.write(someTxt);
         } catch (IOException ex) {
-            Logger.getLogger(basicObject.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BasicObject.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
     }
