@@ -16,7 +16,6 @@ import java.util.logging.Logger;
  */
 public class ObjectStatus extends Thread {
     String myName;
-    int pid;
     
     public void setMyName(String WhoAmI) {
         myName = WhoAmI;
@@ -25,7 +24,7 @@ public class ObjectStatus extends Thread {
     public void run(){
         while (true){
             try {
-                System.out.println("-----CELL REPORT-----we are in the " + myName + " routine, process number "+ pid);
+                System.out.println("-----CELL REPORT-----we are in the " + myName + " routine, process number ");
                 Thread.sleep(5000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
