@@ -26,6 +26,7 @@ public class ObjectStatus extends Thread {
     @Override
     public void run(){
         int pid = 0;
+            // NOTE this is not a child of basic object so code repeats here 
             try {
                 
                 pid = Integer.parseInt(new File("/proc/self").getCanonicalFile().getName());
