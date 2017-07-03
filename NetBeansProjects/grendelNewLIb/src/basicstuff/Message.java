@@ -8,7 +8,7 @@ public class Message implements Serializable{
     int myOrigin = 0;
     int myDestination = 0;
     int actionCode = 0;
-    int myData = 0; 
+    int[] myData = new int[] {0};
     String aTextMessage = "nothin here but the NSA";
     
     public void setID(int id){
@@ -31,15 +31,15 @@ public class Message implements Serializable{
         myDestination = id;    
     }
     
-    public int showDestination(long id){
+    public int showDestination(int id){
         return myDestination;
     }
     
-    public void setDataID(int id){
+    public void setDataID(int[] id){
         myData = id;
     }
     
-    public int showDataID(){
+    public int[] showDataID(){
         return myData;    
     }
     
