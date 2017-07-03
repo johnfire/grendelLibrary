@@ -3,42 +3,43 @@ import java.io.Serializable;
 
 public class Message implements Serializable{
 
-    long idNumber = 0;
-    long myOrigin = 0;
-    long myDestination = 0;
+    int messageNr = 0;
+    int idNumber = 0;
+    int myOrigin = 0;
+    int myDestination = 0;
     int actionCode = 0;
-    long myData = 0; 
+    int myData = 0; 
     String aTextMessage = "nothin here but the NSA";
     
-    public void setID(long id){
+    public void setID(int id){
         idNumber = id;
     }
     
-    public long showID(){
+    public int showID(){
         return idNumber;
     }
     
-    public void setOrigin (long id){
+    public void setOrigin (int id){
         myOrigin = id;
     }
     
-    public long showOrigin(){
+    public int showOrigin(){
         return myOrigin;   
     }
     
-    public void setDestination(long id){
+    public void setDestination(int id){
         myDestination = id;    
     }
     
-    public long showDestination(long id){
+    public int showDestination(long id){
         return myDestination;
     }
     
-    public void setDataID(long id){
+    public void setDataID(int id){
         myData = id;
     }
     
-    public long showDataID(){
+    public int showDataID(){
         return myData;    
     }
     
