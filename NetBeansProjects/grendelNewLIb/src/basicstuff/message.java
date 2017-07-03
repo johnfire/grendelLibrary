@@ -49,9 +49,11 @@ public class message /**/ implements Serializable{
     public int getActionCode(){
         return actionCode;
     }
+    
     public void setMessageTxt(String aText){
         aTextMessage = aText;
     }
+    
     public String getMessageTxt(){
         return aTextMessage;
     }
