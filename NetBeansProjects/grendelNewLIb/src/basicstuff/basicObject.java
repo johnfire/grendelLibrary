@@ -36,7 +36,7 @@ import java.util.logging.Logger;
  *
  * @author christopherrehm
  */
-public abstract class basicObject extends Thread implements Serializable {
+public class basicObject extends Thread implements Serializable {
     
     // this is the basic object that all objects are derived from it has the following properties
     // creates and implements analysis
@@ -118,10 +118,10 @@ public abstract class basicObject extends Thread implements Serializable {
         return 0;
     }
     
-    public String assembleMessage (String[] args){
+    public String buildMessage (String[] args){
         int x = 0;
-        String theMessage = null;
-        for ( x=0; x<args.length;x++){
+        String theMessage = "";
+        for ( x=0; x<args.length; x++){
          theMessage += args[x];    
         }
         System.out.println("the message assembled is " + theMessage);
