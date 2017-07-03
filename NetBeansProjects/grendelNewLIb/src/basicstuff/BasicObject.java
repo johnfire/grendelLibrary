@@ -173,6 +173,5 @@ public class BasicObject extends Thread implements Serializable {
             Logger.getLogger(BasicObject.class.getName()).log(Level.SEVERE, null, ex);
         }
         return pid;
-    }
-    
+    }  
 }
