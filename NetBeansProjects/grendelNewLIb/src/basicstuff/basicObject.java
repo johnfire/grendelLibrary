@@ -45,8 +45,8 @@ public class basicObject extends Thread implements Serializable {
     // write data to txt file 
     // read data from txt file
     
-    private long timerTotal = 0 ;
-    private long startTime = 0 ;
+    long timerTotal = 0 ;
+    long startTime = 0 ;
    
 
     public long now() {
