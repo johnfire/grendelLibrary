@@ -34,7 +34,7 @@ public class ObjectStatus extends Thread {
             Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
         
             try {
-                System.out.println("-----CELL REPORT-----we are in the " + myName + " routine, process number " + pid);
+                System.out.println(java.time.LocalTime.now() + "-----CELL REPORT-----we are in the " + myName + " routine, process number " + pid);
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
