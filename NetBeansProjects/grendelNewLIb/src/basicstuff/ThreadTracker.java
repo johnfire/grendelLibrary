@@ -16,7 +16,7 @@ public class ThreadTracker extends Thread {
     public void run(){
         while (true){
             try {
-                Thread.getAllStackTraces().keySet().forEach((t) -> System.out.println("-----Thread Tracker Report-----"+ t.getName() + " Is Daemon " + t.isDaemon() + " Is Alive " + t.isAlive()));
+                Thread.getAllStackTraces().keySet().forEach((t) -> System.out.println(java.time.LocalTime.now() + "-----Thread Tracker Report-----"+ t.getName() + " Is Daemon " + t.isDaemon() + " Is Alive " + t.isAlive()));
                 Thread.sleep(10000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
