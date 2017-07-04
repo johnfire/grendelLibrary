@@ -149,19 +149,19 @@ public class BasicObject extends Thread implements Serializable {
     }
     
     public void systemMessage(String msg){
-        System.out.println("-----System Message-----" + msg);  
+        System.out.println(java.time.LocalTime.now() + "-----System Message-----" + msg);  
     }
     
     public void systemMessageError(String msg){
-        System.out.println("-----SYSTEM MESSAGE -ERROR-----" + msg);  
+        System.out.println(java.time.LocalTime.now() + "-----SYSTEM MESSAGE -ERROR-----" + msg);  
     }
     
     public void systemMessageStartUp (String msg){
-        System.out.println("-----System Message -Start Up Notice-----" + msg);
+        System.out.println(java.time.LocalTime.now() + "-----System Message -Start Up Notice-----" + msg);
     }
     
     public void testingMessage (String msg){
-        System.out.println("-----Testing Message-----" + msg);
+        System.out.println(java.time.LocalTime.now() + "-----Testing Message-----" + msg);
     }
     
     public int getPID(){
