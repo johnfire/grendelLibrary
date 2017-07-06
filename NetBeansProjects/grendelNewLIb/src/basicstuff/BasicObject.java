@@ -12,9 +12,7 @@ import java.io.Writer;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.Random;
 import java.util.UUID;
-
 
 /*
  * Copyright (C) 2017 christopherrehm.
@@ -81,25 +79,24 @@ public class BasicObject extends Thread implements Serializable {
         return timerTotal;
     }
     
-//    public Message newMessage(int myID, int Destination, int actionCode, int[] data, String text) {
+//    public Message newMessage(int myID, int destination, int actionCode, int[] data, String text) {
 //        
 //        Message newMessage = new Message();
 //        
 //        newMessage.myOrigin = myID;
-//        newMessage.myDestination = Destination;
+//        newMessage.myDestination = destination;
 //        newMessage.myActionCode = actionCode;
 //        newMessage.myData = data;
 //        newMessage.aTextMessage = text;
 //        return newMessage;
 //    } 
-//    
-//    public Message generateRndMessage (int myID, int Destination, int actionCode,int[] data, String text){
-//        Message myNewMsg = newMessage (myID, Destination, actionCode, data, "");
-//        myNewMsg.myActionCode = 0;
-//        //mynewMsg.myData = {1,2,3};
-//        myNewMsg.aTextMessage = UUID.randomUUID().toString();
-//        return myNewMsg;
-//    }
+    
+    public Message generateRndMessage (int myID, int destination, int actionCode,int[] data, String text, boolean real){
+        Message myNewMsg;
+        myNewMsg = Message(myID, destination, actionCode, data, text ,real);
+        myNewMsg.aTextMessage = UUID.randomUUID().toString();
+        return myNewMsg;
+    }
     
     public String readTxtFile(String someTxtFile){
        String mystring = null;   
@@ -186,5 +183,9 @@ public class BasicObject extends Thread implements Serializable {
         } catch (Exception e) {
             this.systemMessageError("something is wrong in the startObjStatus routine");
         }
+    }
+
+    private Message Message(int myID, int Destination, int actionCode, int[] data, String text, boolean real) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
