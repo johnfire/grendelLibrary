@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 
 
-/**
+/** reports that an object is active as a thread
  *
  * @author christopherrehm
  */
@@ -26,8 +26,6 @@ public class ObjectStatus extends Thread {
     
     @Override
     public void run(){
-        
-
         
         // NOTE this is not a child of basic object so code repeats here 
         
