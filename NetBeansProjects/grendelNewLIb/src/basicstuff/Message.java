@@ -17,7 +17,7 @@ public class Message implements Serializable{
     int[] myData;
     String aTextMessage;
 
-    public Message(int i, int i0, int i1, int i2, int[] intAry, String blah) {
+    public Message(int i, int i0, int i1, int i2, int[] intAry, String blah, boolean real) {
          myID = i;
         myOrigin =i0;
         myDestination = i1;
@@ -25,9 +25,14 @@ public class Message implements Serializable{
         myData = intAry;
         aTextMessage = blah;
         System.out.println("CREATING NEW MESSAGE");
-        theMessageCounter = theMessageCounter + 1;
-        System.out.println("THE VALUE OF THE MESSAGE COUNTER IS" + theMessageCounter);
-        myMessageNr  = theMessageCounter;
+        
+        if ( real == true ) {
+            theMessageCounter = theMessageCounter + 1;
+            System.out.println("THE VALUE OF THE MESSAGE COUNTER IS" + theMessageCounter);
+            myMessageNr = theMessageCounter;
+        } else{
+            myMessageNr = 0;
+        }
     }
 
     public int showMessageNr(){
