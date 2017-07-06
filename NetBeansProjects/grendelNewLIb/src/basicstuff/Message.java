@@ -1,6 +1,11 @@
 package basicstuff;
 import java.io.Serializable;
 
+/** standard system message
+ * 
+ * @author christopherrehm
+ */
+
 public class Message implements Serializable{
     
     private static int theMessageCounter = 0;
@@ -11,8 +16,6 @@ public class Message implements Serializable{
     int myActionCode;
     int[] myData;
     String aTextMessage;
-
-    
 
     public Message(int i, int i0, int i1, int i2, int[] intAry, String blah) {
          myID = i;
@@ -47,7 +50,7 @@ public class Message implements Serializable{
         myDestination = id;    
     }
     
-    public int showDestination(int id){
+    public int showDestination(){
         return myDestination;
     }
     
