@@ -91,12 +91,12 @@ public class BasicObject extends Thread implements Serializable {
 //        return newMessage;
 //    } 
     
-    public Message generateRndMessage (int myID, int destination, int actionCode,int[] data, String text, boolean real){
-        Message myNewMsg;
-        myNewMsg = Message(myID, destination, actionCode, data, text ,real);
-        myNewMsg.aTextMessage = UUID.randomUUID().toString();
-        return myNewMsg;
-    }
+//    public Message generateRndMessage (int myID, int destination, int actionCode,int[] data, String text, boolean real){
+//        Message myNewMsg;
+//        myNewMsg = Message(myID, destination, actionCode, data, text ,real);
+//        myNewMsg.aTextMessage = UUID.randomUUID().toString();
+//        return myNewMsg;
+//    }
     
     public String readTxtFile(String someTxtFile){
        String mystring = null;   
