@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  */
 public class ObjectStatus extends Thread {
     String myName;
+    int pid = 0;
     
     public void setMyName(String WhoAmI) {
         myName = WhoAmI;
@@ -25,20 +26,24 @@ public class ObjectStatus extends Thread {
     
     @Override
     public void run(){
-        int pid = 0;
-            // NOTE this is not a child of basic object so code repeats here 
+        
+
+        
+        // NOTE this is not a child of basic object so code repeats here 
+        
+        while (true) {            
             try {
                 
-                pid = Integer.parseInt(new File("/proc/self").getCanonicalFile().getName());
+                this.pid = Integer.parseInt(new File("/proc/self").getCanonicalFile().getName());
             } catch (IOException ex) {
-            Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
-        
-            try {
-                System.out.println(java.time.LocalTime.now() + "-----CELL REPORT-----we are in the " + myName + " routine, process number " + pid);
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
                 Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }     
+            try {
+                System.out.println(java.time.LocalTime.now() + "-----CELL REPORT----- We are in the " + this.myName + " routine, process number " + this.pid);
+                Thread.sleep(30000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ObjectStatus.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }       
     }
 }
