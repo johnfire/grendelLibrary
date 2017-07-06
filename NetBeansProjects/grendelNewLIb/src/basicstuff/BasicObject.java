@@ -175,11 +175,16 @@ public class BasicObject extends Thread implements Serializable {
         return pid;
     }  
     
-    public void startObjStatus (String myName){
-        ObjectStatus myStats = new basicstuff.ObjectStatus();
-        myStats.setMyName(myName);
-        Thread visionThread = new Thread(myStats);
-        visionThread.start(); 
-        this.systemMessageStartUp("starting " + myName +" cell");
+    public void startObjStatus (String myName){try {
+
+            this.systemMessageStartUp("start object status method is starting");
+            ObjectStatus myStats = new basicstuff.ObjectStatus();
+            myStats.setMyName(myName);
+            Thread visionThread = new Thread(myStats);
+            visionThread.start();
+            this.systemMessageStartUp("starting " + myName + " cell object status tracker");
+        } catch (Exception e) {
+            this.systemMessageError("something is wrong in the startObjStatus routine");
+        }
     }
 }
