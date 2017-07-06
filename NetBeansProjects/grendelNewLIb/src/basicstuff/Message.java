@@ -2,21 +2,23 @@ package basicstuff;
 import java.io.Serializable;
 
 public class Message implements Serializable{
-    static int messageNumber;
-    int messageNr = 0;
+    
+    static int messageNr = 0;
+    
+    int myID = 0;
     int myOrigin = 0;
     int myDestination = 0;
     int actionCode = 0;
     int[] myData = new int[] {0,1,2,3};
     String aTextMessage = "nothin here but the NSA";
     
-    public int Message(){
-        this.messageNr++;
-        return this.messageNr;
+    public void Message(){
+        messageNr++;
+        myID  = messageNr;
     }
     
     public int showID(){
-        return this.messageNr;
+        return this.myID;
     }
     
     public void setOrigin (int id){
