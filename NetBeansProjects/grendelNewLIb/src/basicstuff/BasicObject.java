@@ -184,8 +184,4 @@ public class BasicObject extends Thread implements Serializable {
             this.systemMessageError("something is wrong in the startObjStatus routine");
         }
     }
-
-    private Message Message(int myID, int Destination, int actionCode, int[] data, String text, boolean real) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
