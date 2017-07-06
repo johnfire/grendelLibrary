@@ -81,25 +81,25 @@ public class BasicObject extends Thread implements Serializable {
         return timerTotal;
     }
     
-    public Message newMessage(int myID, int Destination, int actionCode, int[] data, String text) {
-        
-        Message newMessage = new Message();
-        
-        newMessage.myOrigin = myID;
-        newMessage.myDestination = Destination;
-        newMessage.actionCode = actionCode;
-        newMessage.myData = data;
-        newMessage.aTextMessage = text;
-        return newMessage;
-    } 
-    
-    public Message generateRndMessage (int myID, int Destination, int actionCode,int[] data, String text){
-        Message myNewMsg = newMessage (myID, Destination, actionCode, data, "");
-        myNewMsg.actionCode = 0;
-        //mynewMsg.myData = {1,2,3};
-        myNewMsg.aTextMessage = UUID.randomUUID().toString();
-        return myNewMsg;
-    }
+//    public Message newMessage(int myID, int Destination, int actionCode, int[] data, String text) {
+//        
+//        Message newMessage = new Message();
+//        
+//        newMessage.myOrigin = myID;
+//        newMessage.myDestination = Destination;
+//        newMessage.myActionCode = actionCode;
+//        newMessage.myData = data;
+//        newMessage.aTextMessage = text;
+//        return newMessage;
+//    } 
+//    
+//    public Message generateRndMessage (int myID, int Destination, int actionCode,int[] data, String text){
+//        Message myNewMsg = newMessage (myID, Destination, actionCode, data, "");
+//        myNewMsg.myActionCode = 0;
+//        //mynewMsg.myData = {1,2,3};
+//        myNewMsg.aTextMessage = UUID.randomUUID().toString();
+//        return myNewMsg;
+//    }
     
     public String readTxtFile(String someTxtFile){
        String mystring = null;   
