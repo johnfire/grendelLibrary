@@ -174,4 +174,12 @@ public class BasicObject extends Thread implements Serializable {
         }
         return pid;
     }  
+    
+    public void startObjStatus (String myName){
+        ObjectStatus myStats = new basicstuff.ObjectStatus();
+        myStats.setMyName(myName);
+        Thread visionThread = new Thread(myStats);
+        visionThread.start(); 
+        this.systemMessageStartUp("starting " + myName +" cell");
+    }
 }
