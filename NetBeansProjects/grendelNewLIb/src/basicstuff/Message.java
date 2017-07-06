@@ -4,21 +4,29 @@ import java.io.Serializable;
 public class Message implements Serializable{
     
     private static int theMessageCounter = 0;
-    int myMessageNr = 0;
-    int myID = 0;
-    int myOrigin = 0;
-    int myDestination = 0;
-    int actionCode = 0;
-    int[] myData = new int[] {0,1,2,3};
-    String aTextMessage = "nothin here but the NSA";
+    int myMessageNr;
+    int myID;
+    int myOrigin;
+    int myDestination;
+    int myActionCode;
+    int[] myData;
+    String aTextMessage;
+
     
-    public void Message(){
+
+    public Message(int i, int i0, int i1, int i2, int[] intAry, String blah) {
+         myID = i;
+        myOrigin =i0;
+        myDestination = i1;
+        myActionCode = i2;
+        myData = intAry;
+        aTextMessage = blah;
         System.out.println("CREATING NEW MESSAGE");
         theMessageCounter = theMessageCounter + 1;
         System.out.println("THE VALUE OF THE MESSAGE COUNTER IS" + theMessageCounter);
         myMessageNr  = theMessageCounter;
     }
-    
+
     public int showMessageNr(){
         return myMessageNr;
     }
@@ -51,12 +59,12 @@ public class Message implements Serializable{
         return myData;    
     }
     
-    public void setActionCode(int theActionCode){
-        actionCode = theActionCode;
+    public void setMyActionCode(int theActionCode){
+        myActionCode = theActionCode;
     }
     
-    public int getActionCode(){
-        return actionCode;
+    public int getMyActionCode(){
+        return myActionCode;
     }
     
     public void setMessageTxt(String aText){
