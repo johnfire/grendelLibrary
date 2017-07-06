@@ -3,8 +3,8 @@ import java.io.Serializable;
 
 public class Message implements Serializable{
     
-    static int messageNr = 0;
-    
+    private static int theMessageCounter = 0;
+    int myMessageNr = 0;
     int myID = 0;
     int myOrigin = 0;
     int myDestination = 0;
@@ -13,8 +13,14 @@ public class Message implements Serializable{
     String aTextMessage = "nothin here but the NSA";
     
     public void Message(){
-        messageNr++;
-        myID  = messageNr;
+        System.out.println("CREATING NEW MESSAGE");
+        theMessageCounter = theMessageCounter + 1;
+        System.out.println("THE VALUE OF THE MESSAGE COUNTER IS" + theMessageCounter);
+        myMessageNr  = theMessageCounter;
+    }
+    
+    public int showMessageNr(){
+        return myMessageNr;
     }
     
     public int showID(){

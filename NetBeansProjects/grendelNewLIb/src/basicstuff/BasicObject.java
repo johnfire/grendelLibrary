@@ -84,7 +84,7 @@ public class BasicObject extends Thread implements Serializable {
     public Message newMessage(int myID, int Destination, int actionCode, int[] data, String text) {
         
         Message newMessage = new Message();
-        newMessage.messageNr = this.messageCounter++;
+        
         newMessage.myOrigin = myID;
         newMessage.myDestination = Destination;
         newMessage.actionCode = actionCode;
