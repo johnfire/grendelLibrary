@@ -18,7 +18,7 @@ public class Message implements Serializable{
     String aTextMessage;
 
     public Message(int i, int i0, int i1, int i2, int[] intAry, String blah, boolean real) {
-         myID = i;
+        myID = i; // not currently used.
         myOrigin =i0;
         myDestination = i1;
         myActionCode = i2;
