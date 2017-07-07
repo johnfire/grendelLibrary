@@ -9,7 +9,6 @@ import java.io.Serializable;
 public class Message implements Serializable{
     
     private static int theMessageCounter = 0;
-    public boolean iAmLocked = false;
     int myMessageNr;
     int myID;
     int myOrigin;
